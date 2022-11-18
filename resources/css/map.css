@@ -1,0 +1,10 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'ol/ol.css';
+
+[x-cloak] {
+    display: none;
+}
+
+

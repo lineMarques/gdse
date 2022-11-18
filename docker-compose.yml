@@ -22,6 +22,19 @@ services:
         networks:
             - gdse
 
+    node:
+        build: .docker/node
+        container_name: node
+        restart: always
+        ports:
+            - "3000:3000"
+            - "35729:35729"
+        volumes:
+            - ./node_modules:/var/www/node_modules
+            - .:/var/www
+        networks:
+            - gdse
+
     postgres:
         image: postgis/postgis:15-3.3-alpine
         volumes:
@@ -35,7 +48,7 @@ services:
             PGDATA: /var/lib/postgresql/data
         networks:
             - gdse
-
+            
     geoserver:
         image: kartoza/geoserver:latest
         ports:
