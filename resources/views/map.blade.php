@@ -7,6 +7,7 @@
     <title>Quick Start</title>
 </head>
 <body>
-   <div id="map">
+    <div id="map">
+    <div id="info"></div>
 </body>
 </html>
